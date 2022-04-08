@@ -1,0 +1,14 @@
+game.Players.LocalPlayer.DataFolder.Information.Jail.Value = 0 --new
+				game.Players.LocalPlayer.Character.Humanoid.Health = 0;
+				local localPlayer = game:GetService('Players').LocalPlayer;
+				local newCharacter = localPlayer.CharacterAdded:Wait();
+				--game.Players.LocalPlayer.Character:ClearAllChildren()
+				local money = Instance.new("Folder", newCharacter);
+				money.Name = "FULLY_LOADED_CHAR"
+				newCharacter:WaitForChild('RagdollConstraints'):Destroy();
+				local spoofValue = Instance.new('BoolValue', newCharacter.BodyEffects);
+				newCharacter:WaitForChild("BodyEffects")
+				newCharacter.BodyEffects.BreakingParts:Destroy()
+				repeat wait() until game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):findFirstChild("Dead")
+				game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyWidthScale").Value = 0.5
+				game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyDepthScale").Value = 0.5

@@ -1,0 +1,10 @@
+game.ReplicatedStorage.MainEvent:FireServer("Block", true) -- set "true" to false if you want player to stop blocking
+
+[[--
+if you want player to loop the block, do this
+------
+while wait() do
+game.ReplicatedStorage.MainEvent:FireServer("Block", true) -- set "true" to false if you want player to stop blocking, if you have a buttonclick copy THIS line
+end
+------
+--]]

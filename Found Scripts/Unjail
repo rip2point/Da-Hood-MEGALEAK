@@ -1,0 +1,28 @@
+ game:GetService("Players").LocalPlayer.DataFolder.Information.Jail.Value = 0
+                                                game:GetService("Players").LocalPlayer.Character.BodyEffects:FindFirstChild("K.O").Value = false
+                                                wait()
+                                                game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(15)
+                                                wait()
+                                                local Char = game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
+                                                local Fold = Instance.new("Folder")
+                                                Fold.Name = "FULLY_LOADED_CHAR"
+                                                Fold.Parent = Char
+                                                Char:WaitForChild("RagdollConstraints"):Destroy()
+                                                local Val = Instance.new("BoolValue", Char)
+                                                Val.Name = "RagdollConstraints"
+                                                wait(8)
+                                                game:GetService("Players").LocalPlayer.Character.BodyEffects.Defense:Destroy()
+                                                Instance.new("NumberValue").Name = "Defense"
+                                                Instance.new("NumberValue").Parent = game:GetService("Players").LocalPlayer.Character.BodyEffects
+                                                game:GetService("ReplicatedStorage").MainEvent:FireServer("UpdateMousePos", game:GetService("Players").LocalPlayer:GetMouse().Hit.Position)
+                                                local plr = game.Players.LocalPlayer
+            plr.Character.Humanoid.Health = 0
+            local newchar = plr.CharacterAdded:Wait()
+            local foldSpoof = Instance.new("Folder",newchar)
+            foldSpoof.Name = "FULLY_LOADED_CHAR"
+            newchar:WaitForChild("RagdollConstraints"):Destroy()
+            local valSpoof = Instance.new("IntValue", newchar:WaitForChild("BodyEffects"))
+            valSpoof.Name = "Armor"
+            valSpoof.Value = 100
+            newchar:WaitForChild("BodyEffects").Armor:Destroy()
+            game:GetService("ReplicatedStorage").MainEvent:FireServer("UpdateMousePos", game:GetService("Players").LocalPlayer:GetMouse().Hit.Position)

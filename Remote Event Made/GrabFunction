@@ -7,5 +7,7 @@ game.ReplicatedStorage.MainEvent:FireServer("Grabbing", false) -- dont switch to
 --drop
 game.ReplicatedStorage.MainEvent:FireServer("Grabbing", false) -- dont switch to true
 
+------
+
 --throw
 game.ReplicatedStorage.MainEvent:FireServer("Grabbing", true) -- dont switch to false

@@ -1,0 +1,3 @@
+game.ReplicatedStorage.MainEvent:FireServer("LeaveCrew")
+wait()
+game.ReplicatedStorage.MainEvent:FireServer("JoinCrew", "group id here")

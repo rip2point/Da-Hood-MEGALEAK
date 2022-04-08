@@ -1,0 +1,26 @@
+if game:GetService("Players").LocalPlayer.DataFolder.Currency.Value >= 125 then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-270.94, 20.327, -242.38)
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-270.94, 20.327, -242.38)
+                wait()
+                fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Key] - $125"].ClickDetector)
+                wait(.1)
+                fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Key] - $125"].ClickDetector)
+                fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Key] - $125"].ClickDetector)
+                repeat
+                    wait()
+                until game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("[Key]")
+                local Hum = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+                if Hum.Health > 0 then
+                    key1 = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("[Key]")
+                    if key1 then
+                        Hum:EquipTool(key1)
+                        for i, v in pairs(game:GetService"Players".LocalPlayer.Character:GetChildren()) do
+                            if v:isA("Tool") then
+                                game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(key1)
+                                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-485.668, 23.631, -285.169)
+                                v:Activate()
+                            end
+                        end
+                    end
+                end
+            end

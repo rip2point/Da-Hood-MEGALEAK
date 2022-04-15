@@ -1,0 +1,5 @@
+--crouch
+game:GetService("VirtualInputManager"):SendKeyEvent(true, "LeftControl", false, game)
+
+--uncrouch
+game:GetService("VirtualInputManager"):SendKeyEvent(false, "LeftControl", false, game)
